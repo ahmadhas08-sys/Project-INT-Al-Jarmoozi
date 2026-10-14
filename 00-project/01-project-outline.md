@@ -3,7 +3,7 @@ name: Ahmed Al-Jarmoozi
 neptun: Y8AJ2T
 id: 2026-LG-05
 github: https://github.com/ahmadhas08-sys/Project-INT-Al-Jarmoozi
-trello: "TODO: add Trello board URL"
+trello: "https://trello.com/b/Vt8Yqrj7/my-trello-board"
 ---
 # GitHub Projects Portfolio Observatory
 
