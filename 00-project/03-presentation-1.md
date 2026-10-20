@@ -16,98 +16,92 @@ Project ID: 2026-LG-05
 
 ## The problem: fragmented visibility
 
-- Several GitHub Projects, different workflows
-- Different status and priority labels
-- No simple portfolio-wide view of risks and changes
-
 ```mermaid
+%%{init: {"themeVariables": {"fontSize": "12px"}, "flowchart": {"nodeSpacing": 12, "rankSpacing": 18, "diagramPadding": 4}}}%%
 flowchart LR
-  A[Project A<br/>Doing] --> D[Manager checks<br/>boards separately]
-  B[Project B<br/>Active] --> D
-  C[Project C<br/>In Progress] --> D
+  A[Website: Doing] --> M[Manual comparison]
+  B[Mobile: Active] --> M
+  C[Infrastructure: Working] --> M
 ```
+
+**Different workflows make portfolio-wide monitoring harder.**
 
 ---
 
-## Who needs this?
+## Who needs it?
 
-- **Contributor:** What needs my attention?
-- **Team lead:** Which work is delayed or blocked?
-- **Portfolio administrator:** How do projects compare?
-- **Wall viewer:** What is the overall picture?
+- **Contributors:** Their assigned work
+- **Team leads:** Delays and blocked tasks
+- **Portfolio administrators:** Cross-project comparisons
+- **Wall viewers:** Permitted read-only overview
 
 ---
 
 ## The proposed solution
 
 ```mermaid
+%%{init: {"themeVariables": {"fontSize": "12px"}, "flowchart": {"nodeSpacing": 12, "rankSpacing": 18, "diagramPadding": 4}}}%%
 flowchart LR
-  A[Authorized GitHub<br/>Projects] --> B[Map different<br/>fields]
-  B --> C[Common work-item<br/>view]
-  C --> D[Dashboards]
-  C --> E[Monitoring flags]
-  C --> F[Observed changes]
+  A[GitHub Projects] --> B[Field mapping]
+  B --> C[Unified view]
+  C --> D[Monitoring]
 ```
 
-**Monitor and explain work — do not replace GitHub Projects.**
+**Compare work consistently without replacing GitHub Projects.**
 
 ---
 
 ## User journey: from connection to insight
 
 ```mermaid
+%%{init: {"themeVariables": {"fontSize": "12px"}, "flowchart": {"nodeSpacing": 12, "rankSpacing": 18, "diagramPadding": 4}}}%%
 flowchart LR
-  A[Connect GitHub] --> B[Select Projects]
-  B --> C[Map fields]
-  C --> D[View dashboard]
-  D --> E[Inspect flagged item]
-  E --> F[Open original item<br/>in GitHub]
+  A[Connect] --> B[Select and map]
+  B --> C[Dashboard]
+  C --> D[Inspect task]
 ```
 
-**Example:** `Doing`, `Active`, and `In Progress` can be mapped to a shared meaning when appropriate.
+**A flagged task links back to its original GitHub item.**
 
 ---
 
-## What will the observatory show?
+## What will users see?
 
-- **Personal view:** work relevant to me
-- **Team view:** compare monitored projects
-- **Wall view:** read-only portfolio overview
-- **Monitoring:** stale, overdue, soon-due, blocked, unassigned, high-priority
-- **History:** important changes detected between collections
+- **Personal view:** Relevant assignments
+- **Team view:** Compare projects and risks
+- **Wall view:** Authorized read-only summary
+- **Monitoring:** Stale, overdue, blocked and other supported indicators
+- **History:** Changes detected between observations
 
-*Indicators appear only when source data supports them.*
+*Missing or unsupported information is clearly labelled.*
 
 ---
 
 ## Scope and boundaries
 
-| In scope | Not the goal |
-| --- | --- |
-| Connect multiple authorized Projects | Replace GitHub Projects |
-| Map fields into a common model | Modify source tasks from the observatory |
-| Dashboards, rules, historical observations | Promise every GitHub edit is captured |
-| Clear access and error states | Depend on AI to make core monitoring work |
+**Included:** Authorized connections · Field mapping · Dashboards · Monitoring · Historical observations
+
+**Not the goal:** Replacing GitHub Projects · Editing original tasks · Capturing every edit · Depending on AI for core features
 
 ---
 
-## What would success look like?
+## What does success look like?
 
-- Two differently configured Projects can be viewed together
-- Their mapped work items are comparable
-- A user can find a flagged item and understand **why**
-- Recent observed changes can be inspected
-- Unavailable or outdated data is clearly labelled
+- Two differently configured Projects appear together
+- Equivalent fields display consistently
+- Flagged tasks explain **why** they need review
+- Important observed changes can be inspected
+- Outdated or unavailable data is clearly labelled
 
-**Outcome:** less manual checking, more actionable visibility.
+**Less manual checking. More actionable visibility.**
 
 ---
 
 ## Next steps
 
 - Validate user journeys and monitoring definitions
-- Refine specification and low-fidelity wireframes
-- Investigate implementation options for Presentation 2
-- Explore cost-efficient AI summaries as a possible extension
+- Refine wireframes and specification
+- Investigate technical options for Presentation 2
+- Consider AI summaries as an optional extension
 
 **Questions?**
